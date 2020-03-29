@@ -1,0 +1,58 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "nuriel",
+      "intents": [
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "OvenIntent",
+          "slots": [
+            {
+              "name": "status",
+              "type": "STATUS"
+            }
+          ],
+          "samples": ["turn oven {status}", "turn {status} oven"]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        }
+      ],
+      "types": [
+        {
+          "name": "STATUS",
+          "values": [
+            {
+              "name": {
+                "value": "off",
+                "synonyms": ["Off", "low"]
+              }
+            },
+            {
+              "name": {
+                "value": "on",
+                "synonyms": ["High", "On"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
